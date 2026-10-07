@@ -1,0 +1,7 @@
+METRIC,VALUE
+Target customers,300.0
+Average churn probability,0.9974526533198014
+Minimum churn probability,0.9958616764225175
+Maximum churn probability,0.9993390569258028
+Expected baseline churn,299.2357959959404
+Expected baseline retention,0.764204004059593

@@ -1,0 +1,15 @@
+table,issue,rows_affected,action
+profile,exact duplicate rows,8,dropped
+profile,inconsistent text in CITY,104,strip + title case
+profile,inconsistent text in MEMBERSHIP_TIER,104,strip + title case
+profile,missing AGE / GENDER / HOME_STORE_PRICE_TIER,250,kept; imputed later inside the model pipeline
+label,exact duplicate rows,5,dropped
+label,no LAST_PURCHASE_DATE (never bought),120,kept for now; filtered in cell 4
+activity,exact duplicate rows,58,dropped
+activity,negative spend,24,recomputed as TRANSACTIONS x AVG_BASKET_VALUE
+activity,zero spend with transactions,20,recomputed as TRANSACTIONS x AVG_BASKET_VALUE
+activity,outlier spend (>3x transactions x basket),13,recomputed as TRANSACTIONS x AVG_BASKET_VALUE
+activity,duplicate customer-month after spend repair,2,dropped
+profile,signed up after March 2024,51,removed from all tables
+all,no purchase before April 2024,181,removed from all tables
+activity,missing customer-months (incl. months before signup),15086,reported only
